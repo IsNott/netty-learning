@@ -13,5 +13,6 @@ public class ChatClientHandler extends SimpleChannelInboundHandler<String> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String s) throws Exception {
           log.info(s);
+          log.info("\n");
     }
 }
