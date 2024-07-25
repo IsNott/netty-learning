@@ -1,7 +1,8 @@
 package org.nott.chat;
 
+import io.netty.channel.Channel;
 import org.nott.chat.client.ChatClient;
-import org.nott.chat.server.ChatServer;
+import java.util.Scanner;
 
 /**
  * @author Nott
@@ -15,6 +16,9 @@ public class ClientMain {
                 client.run();
             } catch (Exception e) {
                 throw new RuntimeException(e);
+            } finally {
+                client.getBoss().shutdownGracefully();
             }
+
     }
 }

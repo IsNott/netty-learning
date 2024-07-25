@@ -26,9 +26,9 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
         Channel say = ctx.channel();
         for (Channel member : channels) {
             if (say != member) {
-                channels.writeAndFlush(String.format("[%s say]: %s.\n", say.remoteAddress(), s));
+                member.writeAndFlush(String.format("[%s say]: %s.\n", say.remoteAddress(), s));
             } else {
-                channels.writeAndFlush(String.format("[You say]: %s.\n", s));
+                member.writeAndFlush(String.format("[You say]: %s.\n", s));
             }
         }
     }

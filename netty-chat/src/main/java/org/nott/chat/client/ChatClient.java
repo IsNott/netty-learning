@@ -11,11 +11,17 @@ import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.Delimiters;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import lombok.Data;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
  * @author Nott
  * @date 2024-7-24
  */
+
+@Data
 public class ChatClient {
 
     private String host;
@@ -23,6 +29,8 @@ public class ChatClient {
     private Integer port;
 
     private NioEventLoopGroup boss;
+
+    private Channel channel;
 
     public ChatClient(String host, Integer port) {
         this.host = host;
@@ -49,7 +57,12 @@ public class ChatClient {
                     .option(ChannelOption.SO_KEEPALIVE,true);
 
             ChannelFuture future = bootstrap.connect(host, port).sync();
-            future.channel().closeFuture().sync();
+            this.channel = future.channel();
+            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            while(true){
+                channel.writeAndFlush(in.readLine() + "\r\n");
+            }
+
         } finally {
             boss.shutdownGracefully();
         }
