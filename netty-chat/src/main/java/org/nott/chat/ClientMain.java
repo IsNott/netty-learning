@@ -1,8 +1,6 @@
 package org.nott.chat;
 
-import io.netty.channel.Channel;
-import org.nott.chat.client.ChatClient;
-import java.util.Scanner;
+import org.nott.chat.socket.client.ChatClient;
 
 /**
  * @author Nott
