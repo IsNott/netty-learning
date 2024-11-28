@@ -1,0 +1,52 @@
+// 使用proto版本
+syntax = "proto3";
+// 包名
+package org.nott.grpc.service;
+// java包名
+option java_package = "org.nott.grpc.service";
+// 是否生成多个文件
+option java_multiple_files = true;
+
+// 定义Rpc方法
+// grpc的请求以及响应不能是基本数据类型，必须是一个message类型，不管请求里有几个参数
+
+service UserService{
+  // 1.客户端发出一个普通的请求，服务器的返回一个普通的响应
+  rpc GetUserRealName(UserNameRequest) returns (UserResponse);
+  // 2.客户端发出一个普通的请求，服务器的以流的形式返回
+  rpc GetUserInfo(UserAgeRequest) returns (stream UserInfoResponse);
+  // 3.以流式的方式请求一个Request服务器会返回一个ResponseList
+  rpc GetUserInfoList(stream  UserAgeRequest) returns (UserInfoResponseList);
+  //4.客户源与服务端都以流式的方式，双向的数据流传递
+  rpc BiStream(stream StreamRequest) returns (stream StreamResponse);
+}
+
+message UserNameRequest{
+  string username = 1;
+}
+
+message UserResponse{
+  string realName = 2;
+}
+
+message UserAgeRequest{
+  int32 age = 1;
+}
+
+message UserInfoResponse{
+  string name = 1;
+  int32 age = 2;
+  string address = 3;
+}
+
+message UserInfoResponseList{
+  repeated UserResponse userInfoResponseList = 1;
+}
+
+message StreamRequest{
+  string request = 1;
+}
+
+message StreamResponse{
+  string request = 1;
+}

@@ -2,7 +2,7 @@
 // source: src/main/java/org/nott/grpc/protobuf/Student.proto
 // Protobuf Java Version: 4.26.1
 
-package org.nott.grpc.model;
+package org.nott.protobuf.model;
 
 public final class DataInfo {
   private DataInfo() {}
@@ -101,15 +101,15 @@ public final class DataInfo {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.nott.grpc.model.DataInfo.internal_static_org_nott_grpc_model_Student_descriptor;
+      return DataInfo.internal_static_org_nott_grpc_model_Student_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.nott.grpc.model.DataInfo.internal_static_org_nott_grpc_model_Student_fieldAccessorTable
+      return DataInfo.internal_static_org_nott_grpc_model_Student_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.nott.grpc.model.DataInfo.Student.class, org.nott.grpc.model.DataInfo.Student.Builder.class);
+              DataInfo.Student.class, DataInfo.Student.Builder.class);
     }
 
     private int bitField0_;
@@ -286,10 +286,10 @@ public final class DataInfo {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.nott.grpc.model.DataInfo.Student)) {
+      if (!(obj instanceof DataInfo.Student)) {
         return super.equals(obj);
       }
-      org.nott.grpc.model.DataInfo.Student other = (org.nott.grpc.model.DataInfo.Student) obj;
+      DataInfo.Student other = (DataInfo.Student) obj;
 
       if (hasName() != other.hasName()) return false;
       if (hasName()) {
@@ -334,44 +334,44 @@ public final class DataInfo {
       return hash;
     }
 
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(byte[] data)
+    public static DataInfo.Student parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(java.io.InputStream input)
+    public static DataInfo.Student parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -379,26 +379,26 @@ public final class DataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.nott.grpc.model.DataInfo.Student parseDelimitedFrom(java.io.InputStream input)
+    public static DataInfo.Student parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.nott.grpc.model.DataInfo.Student parseDelimitedFrom(
+    public static DataInfo.Student parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.nott.grpc.model.DataInfo.Student parseFrom(
+    public static DataInfo.Student parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -411,7 +411,7 @@ public final class DataInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.nott.grpc.model.DataInfo.Student prototype) {
+    public static Builder newBuilder(DataInfo.Student prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -432,18 +432,18 @@ public final class DataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:org.nott.grpc.model.Student)
-        org.nott.grpc.model.DataInfo.StudentOrBuilder {
+        DataInfo.StudentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.nott.grpc.model.DataInfo.internal_static_org_nott_grpc_model_Student_descriptor;
+        return DataInfo.internal_static_org_nott_grpc_model_Student_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.nott.grpc.model.DataInfo.internal_static_org_nott_grpc_model_Student_fieldAccessorTable
+        return DataInfo.internal_static_org_nott_grpc_model_Student_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.nott.grpc.model.DataInfo.Student.class, org.nott.grpc.model.DataInfo.Student.Builder.class);
+                DataInfo.Student.class, DataInfo.Student.Builder.class);
       }
 
       // Construct using org.nott.grpc.model.DataInfo.Student.newBuilder()
@@ -469,17 +469,17 @@ public final class DataInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.nott.grpc.model.DataInfo.internal_static_org_nott_grpc_model_Student_descriptor;
+        return DataInfo.internal_static_org_nott_grpc_model_Student_descriptor;
       }
 
       @java.lang.Override
-      public org.nott.grpc.model.DataInfo.Student getDefaultInstanceForType() {
-        return org.nott.grpc.model.DataInfo.Student.getDefaultInstance();
+      public DataInfo.Student getDefaultInstanceForType() {
+        return DataInfo.Student.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.nott.grpc.model.DataInfo.Student build() {
-        org.nott.grpc.model.DataInfo.Student result = buildPartial();
+      public DataInfo.Student build() {
+        DataInfo.Student result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -487,14 +487,14 @@ public final class DataInfo {
       }
 
       @java.lang.Override
-      public org.nott.grpc.model.DataInfo.Student buildPartial() {
-        org.nott.grpc.model.DataInfo.Student result = new org.nott.grpc.model.DataInfo.Student(this);
+      public DataInfo.Student buildPartial() {
+        DataInfo.Student result = new DataInfo.Student(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.nott.grpc.model.DataInfo.Student result) {
+      private void buildPartial0(DataInfo.Student result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -514,16 +514,16 @@ public final class DataInfo {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.nott.grpc.model.DataInfo.Student) {
-          return mergeFrom((org.nott.grpc.model.DataInfo.Student)other);
+        if (other instanceof DataInfo.Student) {
+          return mergeFrom((DataInfo.Student)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.nott.grpc.model.DataInfo.Student other) {
-        if (other == org.nott.grpc.model.DataInfo.Student.getDefaultInstance()) return this;
+      public Builder mergeFrom(DataInfo.Student other) {
+        if (other == DataInfo.Student.getDefaultInstance()) return this;
         if (other.hasName()) {
           name_ = other.name_;
           bitField0_ |= 0x00000001;
@@ -802,12 +802,12 @@ public final class DataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:org.nott.grpc.model.Student)
-    private static final org.nott.grpc.model.DataInfo.Student DEFAULT_INSTANCE;
+    private static final DataInfo.Student DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.nott.grpc.model.DataInfo.Student();
+      DEFAULT_INSTANCE = new DataInfo.Student();
     }
 
-    public static org.nott.grpc.model.DataInfo.Student getDefaultInstance() {
+    public static DataInfo.Student getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -843,7 +843,7 @@ public final class DataInfo {
     }
 
     @java.lang.Override
-    public org.nott.grpc.model.DataInfo.Student getDefaultInstanceForType() {
+    public DataInfo.Student getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

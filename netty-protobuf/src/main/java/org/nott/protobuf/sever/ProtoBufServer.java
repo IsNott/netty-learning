@@ -1,18 +1,17 @@
-package org.nott.grpc.sever;
+package org.nott.protobuf.sever;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import org.nott.grpc.client.GrpcClient;
-import org.nott.grpc.sever.initializer.GrpcServiceInitializer;
+import org.nott.protobuf.sever.initializer.GrpcServiceInitializer;
 
 /**
  * @author Nott
  * @date 2024-11-28
  */
-public class GrpWsServer {
+public class ProtoBufServer {
 
     public void run() throws Exception{
         NioEventLoopGroup boss = null;
@@ -38,6 +37,6 @@ public class GrpWsServer {
     }
 
     public static void main(String[] args) throws Exception{
-        new GrpWsServer().run();
+        new ProtoBufServer().run();
     }
 }

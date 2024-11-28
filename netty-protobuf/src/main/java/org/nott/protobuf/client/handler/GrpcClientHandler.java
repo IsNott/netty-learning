@@ -1,8 +1,8 @@
-package org.nott.grpc.client.handler;
+package org.nott.protobuf.client.handler;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import org.nott.grpc.model.DataInfo;
+import org.nott.protobuf.model.DataInfo;
 
 /**
  * @author Nott

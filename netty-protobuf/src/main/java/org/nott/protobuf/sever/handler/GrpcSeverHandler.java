@@ -1,9 +1,9 @@
-package org.nott.grpc.sever.handler;
+package org.nott.protobuf.sever.handler;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
-import org.nott.grpc.model.DataInfo;
+import org.nott.protobuf.model.DataInfo;
 
 /**
  * @author Nott
