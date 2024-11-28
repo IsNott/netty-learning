@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package org.nott.grpc.model;
+
+option optimize_for = SPEED;
+
+option java_package = "org.nott.grpc.model";
+
+option java_outer_classname = "DataInfo";
+
+message Student{
+	required string name = 1;
+	optional int32 age = 2;
+	optional string address = 3;
+}

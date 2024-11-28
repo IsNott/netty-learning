@@ -23,6 +23,6 @@ public class ChatServerChannelInitializer extends ChannelInitializer<SocketChann
         pipeline.addLast("decoder", new StringDecoder());
         pipeline.addLast("encoder", new StringEncoder());
         pipeline.addLast("handler", new ChatServerHandler());
-        log.info("{}，解码链接",sc.remoteAddress());
+//        log.info("{}，解码链接",sc.remoteAddress());
     }
 }
