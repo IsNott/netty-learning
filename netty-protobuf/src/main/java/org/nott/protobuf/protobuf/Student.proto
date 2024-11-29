@@ -1,15 +1,32 @@
+/**
+	参考文档：https://protobuf.com.cn/programming-guides/proto2/
+	https://protobuf.com.cn/programming-guides/proto3/
+	语法:proto2、proto3
+	2可在3中使用，3不可在2中使用
+ */
 syntax = "proto2";
 
+// 生成包名
 package org.nott.grpc.model;
 
+// option：选项
+// optimize_for（文件选项）：可以设置为 SPEED（默认）、CODE_SIZE 或 LITE_RUNTIME
 option optimize_for = SPEED;
 
+// 可选项 生成java包名，当与package共存，优先级高于package
 option java_package = "org.nott.grpc.model";
 
+// 生成java类名
 option java_outer_classname = "DataInfo";
 
+/**
+	message: 消息类型，Protobuf每个message对应生成一个java类
+  protobuf支持的类型：double、float、int32、int64、bool、string 等等
+ */
+
 message Student{
-	required string name = 1;
+	// optional:字段处于两种可能状态之一，已设置、未设置值
+	optional string name = 1; // 1: 字段编号,您必须为消息定义中的每个字段指定 1 到 536,870,911 之间的一个数字,每个字段的编号唯一
 	optional int32 age = 2;
 	optional string address = 3;
 }

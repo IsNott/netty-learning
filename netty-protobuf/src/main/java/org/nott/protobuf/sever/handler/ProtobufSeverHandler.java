@@ -10,7 +10,7 @@ import org.nott.protobuf.model.DataInfo;
  * @date 2024-11-28
  */
 @Slf4j
-public class GrpcSeverHandler extends SimpleChannelInboundHandler<DataInfo.Student> {
+public class ProtobufSeverHandler extends SimpleChannelInboundHandler<DataInfo.Student> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, DataInfo.Student student) throws Exception {

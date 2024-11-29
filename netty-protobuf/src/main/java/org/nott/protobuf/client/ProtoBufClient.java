@@ -6,7 +6,7 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 
 import io.netty.channel.socket.nio.NioSocketChannel;
-import org.nott.protobuf.client.initializer.GrpcClientInitializer;
+import org.nott.protobuf.client.initializer.ProtoBufClientInitializer;
 
 /**
  * @author Nott
@@ -26,7 +26,7 @@ public class ProtoBufClient {
                     .option(ChannelOption.TCP_NODELAY, true)
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .option(ChannelOption.SO_KEEPALIVE, true)
-                    .handler(new GrpcClientInitializer())
+                    .handler(new ProtoBufClientInitializer())
                     .bind(9999)
                     .sync();
             ChannelFuture channelFuture = bootstrap.connect("localhost", 8888).sync();

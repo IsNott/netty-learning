@@ -8,7 +8,7 @@ import org.nott.protobuf.model.DataInfo;
  * @author Nott
  * @date 2024-11-28
  */
-public class GrpcClientHandler extends ChannelInboundHandlerAdapter {
+public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

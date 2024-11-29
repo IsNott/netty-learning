@@ -5,7 +5,7 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import org.nott.protobuf.sever.initializer.GrpcServiceInitializer;
+import org.nott.protobuf.sever.initializer.ProtobufServiceInitializer;
 
 /**
  * @author Nott
@@ -26,7 +26,7 @@ public class ProtoBufServer {
                     .childOption(ChannelOption.SO_KEEPALIVE, true)
                     .childOption(ChannelOption.TCP_NODELAY, true)
                     .childOption(ChannelOption.CONNECT_TIMEOUT_MILLIS, 3000)
-                    .childHandler(new GrpcServiceInitializer())
+                    .childHandler(new ProtobufServiceInitializer())
                     .bind(8888)
                     .sync();
             future.channel().closeFuture().sync();

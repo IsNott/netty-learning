@@ -8,13 +8,13 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import org.nott.protobuf.model.DataInfo;
-import org.nott.protobuf.sever.handler.GrpcSeverHandler;
+import org.nott.protobuf.sever.handler.ProtobufSeverHandler;
 
 /**
  * @author Nott
  * @date 2024-11-28
  */
-public class GrpcServiceInitializer extends ChannelInitializer<SocketChannel> {
+public class ProtobufServiceInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
     protected void initChannel(SocketChannel socketChannel) throws Exception {
@@ -23,6 +23,6 @@ public class GrpcServiceInitializer extends ChannelInitializer<SocketChannel> {
         pip.addLast(new ProtobufDecoder(DataInfo.Student.getDefaultInstance()));
         pip.addLast(new ProtobufVarint32LengthFieldPrepender());
         pip.addLast(new ProtobufEncoder());
-        pip.addLast(new GrpcSeverHandler());
+        pip.addLast(new ProtobufSeverHandler());
     }
 }
